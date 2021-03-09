@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:weather_app/city.dart';
+import 'file:///C:/Users/thefatflyer/AndroidStudioProjects/weather_app/lib/model/city.dart';
 
 class Details extends StatelessWidget{
   final City city;

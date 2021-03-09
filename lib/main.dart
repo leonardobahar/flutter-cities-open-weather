@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-import 'package:weather_app/homepage.dart';
 import 'package:weather_app/services/api_calls/update_weather_service.dart';
 import 'package:weather_app/services/user_weather_list_service.dart';
+import 'package:weather_app/views/homepage.dart';
 
 GetIt locator = GetIt.instance;
 

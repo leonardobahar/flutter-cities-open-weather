@@ -1,11 +1,40 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
-import 'package:weather_app/city.dart';
-import 'package:weather_app/details.dart';
+import '../main.dart';
+import 'file:///C:/Users/thefatflyer/AndroidStudioProjects/weather_app/lib/views/add_city_to_list.dart';
 import 'package:weather_app/services/user_weather_list_service.dart';
 
-import 'main.dart';
+import 'details.dart';
+
+class Homepage extends StatefulWidget{
+
+  @override
+  State createState() {
+    return _HomepageState();
+  }
+}
+
+class _HomepageState extends State<Homepage>{
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text(
+        'CodeDoc Weather App'
+      )),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => AddCityToList()),
+          );
+        },
+        child: Icon(Icons.add)
+      ),
+      body: UserWeatherList()
+    );
+  }
+}
 
 class UserWeatherList extends StatefulWidget {
 
@@ -33,10 +62,10 @@ class _UserWeatherListState extends State<UserWeatherList>{
 
   @override
   Widget build(BuildContext context) {
-     print("Built");
+    print("Built");
     return Builder(
       builder: (_){
-       // this.cityList = locator.get<UserWeatherListService>().getCities();
+        // this.cityList = locator.get<UserWeatherListService>().getCities();
 
         return ListView.separated(
           itemBuilder: (_, index) {

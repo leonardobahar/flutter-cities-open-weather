@@ -1,4 +1,4 @@
-import '../city.dart';
+import '../model/city.dart';
 
 class UserWeatherListService{
   List<City> cityList = [

@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
-import 'package:weather_app/city.dart';
-import 'package:weather_app/homepage.dart';
 import 'package:weather_app/main.dart';
+import 'package:weather_app/model/city.dart';
 import 'package:weather_app/services/user_weather_list_service.dart';
+
+import 'homepage.dart';
 
 class AddCityToList extends StatefulWidget{
 
