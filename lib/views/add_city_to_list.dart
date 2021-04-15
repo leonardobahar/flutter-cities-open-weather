@@ -6,15 +6,14 @@ import 'package:weather_app/services/user_weather_list_service.dart';
 
 import 'homepage.dart';
 
-class AddCityToList extends StatefulWidget{
-
+class AddCityToList extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     return _CityInputState();
   }
 }
 
-class _CityInputState extends State<AddCityToList>{
+class _CityInputState extends State<AddCityToList> {
   late TextEditingController _controller;
 
   @override
@@ -36,20 +35,20 @@ class _CityInputState extends State<AddCityToList>{
                 border: OutlineInputBorder(),
                 labelText: 'Insert city name',
               ),
-              onSubmitted: (String value)async{
-                locator.get<UserWeatherListService>().addCity(City(value, "ID"));
+              onSubmitted: (String value) async {
+                locator
+                    .get<UserWeatherListService>()
+                    .addCity(City(value, "ID"));
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => Homepage()),
+                  MaterialPageRoute(builder: (context) => Homepage()),
                 );
               },
             ),
             RaisedButton(
               onPressed: () => Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(
-                    builder: (context) => Homepage()),
+                MaterialPageRoute(builder: (context) => Homepage()),
               ),
               child: Text('Cancel'),
             ),
@@ -64,6 +63,4 @@ class _CityInputState extends State<AddCityToList>{
     _controller.dispose();
     super.dispose();
   }
-
-
 }

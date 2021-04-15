@@ -6,17 +6,17 @@ import 'package:weather_app/views/homepage.dart';
 
 GetIt locator = GetIt.instance;
 
-void setupLocator(){
+void setupLocator() {
   locator.registerLazySingleton(() => UserWeatherListService());
 }
 
-void main(){
+void main() {
   setupLocator();
   runApp(WeatherApp());
 }
 
-class WeatherApp extends StatelessWidget{
-  Widget build(BuildContext context){
+class WeatherApp extends StatelessWidget {
+  Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Weather App',
       theme: ThemeData(
